@@ -1,0 +1,674 @@
+/* colors #2F8F9D #3BACB6 #82DBD8 #B3E8E5 */
+/* font-family: Vazirmatn, sans-serif; */
+body {
+  font-family: Vazirmatn, sans-serif;
+  text-align: center;
+  background-color: #abd4d26e;
+}
+
+/* menutoggle-----------------
+------------------------------ */
+
+#menuToggle {
+  display: block;
+  position: relative;
+  top: 50px;
+  left: 50px;
+
+  z-index: 3;
+
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle a {
+  text-decoration: none;
+  color: #232323;
+
+  transition: color 0.3s ease;
+}
+
+#menuToggle a:hover {
+  color: tomato;
+}
+
+#menuToggle > input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -56px;
+  left: -51px;
+
+  cursor: pointer;
+
+  opacity: 0; /* hide this */
+  z-index: 5; /* and place it over the hamburger */
+
+  -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  right: 48px;
+  bottom: 48px;
+  background: #cdcdcd;
+  border-radius: 3px;
+
+  z-index: 4;
+
+  transform-origin: 4px 0px;
+
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+}
+
+#menuToggle span:first-child {
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle > input:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle > input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle > input:checked ~ span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#hiddenmenu {
+  color: black;
+  position: absolute;
+  width: 320px;
+  height: 2000px;
+  text-align: right;
+  margin: -117px 0 0 -35px;
+  padding: 50px;
+  padding-top: 125px;
+  background: #ededed;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+
+  transform-origin: 0% 0%;
+  transform: translate(36%, 0);
+
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+
+#hiddenmenu li {
+  padding: 10px 0;
+  font-size: 1.2rem;
+}
+
+#hiddenmenu > hr {
+  margin: 2px 0;
+}
+
+/*
+ * And let's slide it in from the left
+ */
+#menuToggle > input:checked ~ #hiddenmenu {
+  transform: translate(-75%, 0);
+}
+/* lets make another slide in a part */
+.mahsulat-nav {
+  position: relative;
+}
+.mahsulat-nav > .fa-solid {
+  position: absolute;
+  left: 0;
+  top: 13px;
+  transition: transform 0.5s ease;
+}
+.mahsulat-nav > input {
+  position: absolute;
+  left: 0;
+  top: 16px;
+  opacity: 0;
+  z-index: 2;
+  cursor: pointer;
+}
+.mahsulat-navlist {
+  list-style: none;
+  margin-right: 30px;
+  display: none;
+}
+.menu-slider {
+  display: none;
+  position: absolute;
+  width: 230px;
+  height: 182px;
+  background-color: #ededed;
+  transform-origin: bottom;
+
+  animation: mahsulatslide 0.5s ease 0s 1 alternate;
+}
+
+/* down arrow to rotate */
+
+.mahsulat-nav > input:checked ~ .fa-solid {
+  transform: rotate(180deg);
+}
+/* to slide the list  00*/
+
+.mahsulat-nav > input:checked ~ .mahsulat-navlist {
+  display: block;
+}
+.mahsulat-nav > input:checked ~ .menu-slider {
+  display: block;
+
+  transform: rotateX(90deg);
+}
+@keyframes mahsulatslide {
+  0% {
+    transform: none;
+  }
+  100% {
+    transform: rotateX(90deg);
+  }
+}
+/* media query */
+
+@media (max-width: 768px) {
+  .first-nav-ul {
+    display: none;
+  }
+}
+@media (min-width: 769px) {
+  #menuToggle {
+    display: none;
+  }
+}
+/* containers --------------------------*/
+/* --------------------------------------------------------------------------- */
+.container-fluid {
+  padding: 1% 8%;
+}
+
+/* section */
+.colored-section {
+  color: #fff;
+}
+#products {
+  padding: 8% 8%;
+}
+
+/* heading */
+.big-heading {
+  font-size: 2.8rem;
+  font-weight: 900;
+}
+
+/* --------- */
+/* navbar ---------------- */
+/* anchor tag settings in navbar */
+#title,
+.navbar {
+  background-color: #2f8f9d;
+}
+
+.navbar .nav-link:focus {
+  color: #fff;
+}
+.nav-link {
+  color: #fff;
+  font-size: 1.08rem;
+}
+.navbar .nav-link:hover {
+  color: rgba(255, 255, 255, 0.486);
+}
+.navbar-brand,
+.navbar-brand:hover,
+.navbar-brand:focus {
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+nav .nav-item {
+  margin: 0 8px;
+}
+
+nav .btn:focus,
+nav .btn:active {
+  box-shadow: none;
+}
+
+.nav-protecter {
+  width: 100%;
+  height: 80.39px;
+}
+
+/* main title ---------------- */
+.title-heading {
+  line-height: 1.5;
+  margin: auto auto 6%;
+}
+.title-heading ~ p:nth-last-child(2) {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 8%;
+}
+.title-heading ~ .btn2 {
+  position: relative;
+  top: 21px;
+}
+
+.title-heading ~ .btn1::after,
+.title-heading ~ .btn2::after {
+  content: "قبلا ثبت نام کردی ؟";
+  margin-left: 20px;
+  position: relative;
+  bottom: 17px;
+}
+.title-heading ~ .btn2::after {
+  content: "دیدن محصولات با تخفیف";
+}
+
+.title-heading ~ span > .btn {
+  padding: 7px 49px;
+  margin-bottom: 2rem;
+}
+.title-heading ~ span > .btn:hover,
+.title-heading ~ span > .btn:focus {
+  color: #2f8f9d;
+}
+/* carousel-image-container in *title* important */
+#title .carousel-container {
+  padding: 5% 0;
+}
+#title .carousel-image-container {
+  position: relative;
+  left: -450px;
+  animation: clothesAnimTranslate 1s ease 0s 1 alternate;
+  transform: translate(434px, 0px);
+}
+
+#title [class*="carousel-imageSet"] {
+  width: 60%;
+
+  transform: rotate(-20deg);
+  animation: clothesAnimRotate 3s cubic-bezier(0.45, 0.22, 0.31, 0.72) 0.6s
+    infinite alternate;
+}
+#title .carousel-imageSet2 {
+  /* to make the carousels with the same height
+  so we need to change width of an item in smaller carousel  */
+
+  width: 62.7%;
+}
+#title .carousel button[class^="carousel-control"] {
+  opacity: 0;
+  transition: opacity 0.8s;
+}
+#title .carousel:hover button[class^="carousel-control"] {
+  opacity: 1;
+}
+
+/* anaimations for title  */
+
+@keyframes clothesAnimTranslate {
+  0% {
+    transform: translate(0px, 0px);
+  }
+
+  100% {
+    transform: translate(434px, 0px);
+  }
+}
+
+@keyframes clothesAnimRotate {
+  0% {
+    transform: rotate(-20deg);
+  }
+  25% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-20deg);
+  }
+  75% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-20deg);
+  }
+}
+/* title media query set */
+
+/* without this media quary carousel height changes
+ when it slides so we dont want interuption when we
+ are in web 
+
+*/
+@media (max-width: 768px) {
+  .navbar {
+    background-color: #3bacb6;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1274px) {
+  #title .carousel-container {
+    height: 479px;
+  }
+}
+@media (max-width: 992px) {
+  #title [class*="carousel-imageSet"] {
+    width: 300px;
+  }
+  .title-heading {
+    font-size: 2.2rem;
+    margin: auto auto 3%;
+  }
+  .title-heading ~ p:nth-last-child(2) {
+    margin-bottom: 4%;
+  }
+  #title .carousel-container {
+    height: 600px;
+  }
+}
+
+/* card container 
+    -------------------------------------- 
+     -------------------------------------- 
+      --------------------------------------   */
+
+.card-container {
+  position: relative;
+  transition: transform 0.6s;
+}
+.card-container:hover {
+  transform: translate3d(0, -10px, 20px);
+}
+
+.card-container:hover .card {
+  box-shadow: 0px 0px 19px 2px rgba(104, 98, 98, 0.39);
+}
+.card-container .card {
+  position: relative;
+  width: 320px;
+  height: 450px;
+  background: #5c5959;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 0 auto 15%;
+}
+
+.card-container .card::before,
+.card-container .card1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #9bdc28;
+  clip-path: circle(150px at 80% 20%);
+  transition: 0.5s ease-in-out;
+}
+.card-container .card2::before {
+  background: #1c3973;
+}
+.card-container .card3::before {
+  background: #61c2d9;
+}
+
+.card-container .card:hover:before {
+  clip-path: circle(300px at 80% -20%);
+}
+
+.card-container .card:after {
+  content: "Nike";
+  position: absolute;
+  top: 30%;
+  left: -20%;
+  font-size: 12em;
+  font-weight: 800;
+  font-style: italic;
+  color: rgba(255, 255, 253, 0.151);
+}
+.card-container .card2:after {
+  content: "gucci";
+}
+.card-container .card3:after {
+  content: "AD";
+  left: 7%;
+}
+
+.card-container .card .imgBx {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 4;
+  width: 100%;
+  height: 220px;
+  transition: 0.5s;
+}
+/* translate */
+.card-container .card1:hover .imgBx {
+  top: 0%;
+  transform: translateY(0%);
+}
+.card-container .card2:hover .imgBx {
+  top: 0%;
+  transform: translateY(25%);
+}
+.card-container .card3:hover .imgBx {
+  top: 0%;
+  transform: translateY(25%);
+}
+/*   ---   */
+
+.card-container .card .imgBx img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-25deg);
+  width: 270px;
+}
+.card-container .card2 .imgBx img,
+.card-container .card3 .imgBx img {
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+.card-container .card .card-protetor {
+  background-color: rgba(17, 17, 17, 0.425);
+  z-index: 9;
+  width: 320px;
+  height: 452px;
+  opacity: 0;
+  transition: 0.5s;
+}
+.card-container .card:hover .card-protetor {
+  opacity: 1;
+}
+.card-container .card .contentBx {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  transition: 1s;
+  z-index: 10;
+}
+
+.card-container .card:hover .contentBx {
+  height: 210px;
+}
+
+.card-container .card .contentBx h2 {
+  position: relative;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #fff;
+  margin: 0;
+}
+.card-container .card .contentBx .size,
+.card-container .card .contentBx .color {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 20px;
+  transition: 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.card-container .card:hover .contentBx .size {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0.5s;
+}
+
+.card-container .card:hover .contentBx .color {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0.6s;
+}
+
+.card-container .card .contentBx .size h3,
+.card-container .card .contentBx .color h3 {
+  color: #fff;
+  font-weight: 500;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-right: 25px;
+  position: relative;
+  top: 16px;
+  margin-bottom: 1.5rem;
+}
+
+.card-container .card .contentBx .size span {
+  width: 26px;
+  height: 26px;
+  text-align: center;
+  line-height: 26px;
+  font-size: 14px;
+  display: inline-block;
+  color: #111;
+  background: #fff;
+  margin: 0 5px;
+  transition: 0.5s;
+  color: #111;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.card-container .card .contentBx .size span:hover {
+  background: #9bdc28;
+}
+
+.card-container .card .contentBx .color span {
+  width: 20px;
+  height: 20px;
+  background: #ff0;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.card-container .card .contentBx .color span:nth-child(2) {
+  background: #9bdc28;
+}
+
+.card-container .card .contentBx .color span:nth-child(3) {
+  background: #03a9f4;
+}
+
+.card-container .card .contentBx .color span:nth-child(4) {
+  background: #e91e63;
+}
+
+.card-container .card .contentBx a {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #fff;
+  border-radius: 4px;
+  margin-top: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #111;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 0.5s;
+  margin-top: 0;
+}
+
+.card-container .card:hover .contentBx a {
+  opacity: 1;
+  transform: translateY(0px);
+  transition-delay: 0.75s;
+}
+
+@media (max-width: 768px) {
+  .card-container .card {
+    width: 229px;
+    height: 341px;
+  }
+  .card-container .card .imgBx > img {
+    width: 200px;
+  }
+  .card-container .card .contentBx a {
+    position: absolute;
+    bottom: 20px;
+    right: 80px;
+  }
+}
+
+/* ------------------------
+ ------------------------  
+ ------------------------*/
+
+/* products */
+/* carousel in product section */
+
+.card-box-style {
+  padding: 5% 8%;
+}
+/* media q  */
+@media (max-width: 1120px) {
+  #products .card-box-style {
+    display: none;
+  }
+  #products .carousel-item {
+    padding: 5% 0;
+  }
+}
+@media (min-width: 1121px) {
+  #products .carousel {
+    display: none;
+  }
+}

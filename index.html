@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lebas frooshi</title>
+
+    <!-- bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+      integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+      integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- fontawsome -->
+
+    <script
+      src="https://kit.fontawesome.com/1d557f0b4b.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- stylesheet -->
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v32.102/Vazirmatn-font-face.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+  <body>
+    <!-- title section -->
+    <section id="title" class="colored-section">
+      <nav class="navbar navbar-expand-md fixed-top">
+        <div class="container-fluid">
+          <a href="" class="navbar-brand">لباس فروشی</a>
+          <ul class="first-nav-ul navbar-nav justify-content-end">
+            <li class="nav-item">
+              <a class="nav-link btn btn-primary" role="button" href="#"
+                >ثبت نام</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">خانه</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">محصولات</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">ارتباط باما</a>
+            </li>
+          </ul>
+
+          <!--* hamburger hidden menu ----------
+          -------------------------
+        --- *-->
+
+          <div id="menuToggle">
+            <input type="checkbox" />
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+            <ul id="hiddenmenu">
+              <a href="#">
+                <li>
+                  <h5>خانه</h5>
+                </li></a
+              >
+              <hr />
+
+              <li class="mahsulat-nav">
+                <h5>محصولات</h5>
+                <input type="checkbox" />
+                <i class="fa-solid fa-angle-down"></i>
+                <div class="menu-slider"></div>
+                <ul class="mahsulat-navlist">
+                  <a href="#"><li>شلوار</li></a>
+                  <a href="#"><li>تیشرت</li></a>
+                  <a href="#"><li>پیرهن</li></a>
+                  <a href="#"><li>اکسسوری</li></a>
+                </ul>
+              </li>
+
+              <hr class="second-hr" />
+              <a href="#"
+                ><li>
+                  <h5>ارتباط باما</h5>
+                </li></a
+              >
+            </ul>
+          </div>
+
+          <!-- --
+            -----------------------
+            -------- -->
+        </div>
+      </nav>
+      <div class="nav-protecter"></div>
+
+      <!--
+        
+        --  main title -->
+
+      <!-- --carousel controls--
+      
+      -->
+
+      <div
+        id="carouseltitleControls"
+        class="carousel slide carousel-fade carousel-container"
+        data-bs-ride="carousel"
+        data-bs-touch="true"
+      >
+        <div class="container-fluid">
+          <div class="carousel-inner">
+            <div class="carousel-item c-item1 active">
+              <div class="row">
+                <div class="carousel-image-container col-lg-6">
+                  <img
+                    src="images/lebas main.png"
+                    class="carousel-imageSet1"
+                    alt=""
+                  />
+                </div>
+                <div class="col-lg-6">
+                  <h1 class="title-heading big-heading">
+                    اینجا با لباس فروشی با کلاس می پوشی
+                  </h1>
+                  <p>;) ارسال فوری به سراسر کهکشان</p>
+                  <span class="btn1">
+                    <button
+                      class="btn btn-lg btn-outline-light d-inline-block position-relative"
+                    >
+                      ورود
+                    </button>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item c-item2">
+              <div class="row">
+                <div class="carousel-image-container col-lg-6">
+                  <img
+                    src="images/takhfif.png"
+                    class="carousel-imageSet2"
+                    alt=""
+                  />
+                </div>
+                <div class="col-lg-6">
+                  <h1 class="title-heading big-heading">
+                    تخفیف بدون مناسبت و عشقی
+                  </h1>
+                  <span class="btn2"
+                    ><button
+                      class="btn btn-lg btn-outline-light d-inline-block position-relative"
+                    >
+                      ادامه
+                    </button></span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button
+          class="carousel-control-prev d-none d-md-inline-block"
+          type="button"
+          data-bs-target="#carouseltitleControls"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </button>
+        <button
+          class="carousel-control-next d-none d-md-inline-block"
+          type="button"
+          data-bs-target="#carouseltitleControls"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </button>
+      </div>
+    </section>
+    <!-- products -->
+    <section id="products">
+      <div class="container-fluid products-container">
+        <!-- card area 
+                ----------
+                      ------------- -->
+
+        <h2>پر فروش های هفته</h2>
+        <div class="row card-box-style">
+          <div class="col">
+            <div class="card-container">
+              <div class="card card1">
+                <div class="imgBx">
+                  <img src="https://assets.codepen.io/4164355/shoes.png" />
+                </div>
+                <div class="card-protetor"></div>
+                <!-- fill hover  -->
+                <div class="contentBx">
+                  <h2>s25mix کفش نایکی مدل</h2>
+                  <div class="size">
+                    <h3>سایز</h3>
+                    <span>7</span>
+                    <span>8</span>
+                    <span>9</span>
+                    <span>10</span>
+                  </div>
+                  <div class="color">
+                    <h3>رنگ</h3>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                  <a href="#">خرید</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card-container">
+              <div class="card card2">
+                <div class="imgBx">
+                  <img src="images/dress_image.png" />
+                </div>
+                <div class="card-protetor"></div>
+                <!-- fill hover  -->
+                <div class="contentBx">
+                  <h2>gucci k21m تاپ مدل</h2>
+                  <div class="size">
+                    <h3>سایز</h3>
+                    <span>7</span>
+                    <span>8</span>
+                    <span>9</span>
+                    <span>10</span>
+                  </div>
+                  <div class="color">
+                    <h3>رنگ</h3>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                  <a href="#">خرید</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card-container">
+              <div class="card card3">
+                <div class="imgBx">
+                  <img src="images/shirt image.png" />
+                </div>
+                <div class="card-protetor"></div>
+                <!-- fill hover  -->
+                <div class="contentBx">
+                  <h2>reider 2 پیراهن AD مدل</h2>
+                  <div class="size">
+                    <h3>سایز</h3>
+                    <span>7</span>
+                    <span>8</span>
+                    <span>9</span>
+                    <span>10</span>
+                  </div>
+                  <div class="color">
+                    <h3>رنگ</h3>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                  <a href="#">خرید</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- carousel for mobile devices ---------------------
+        ------------------------
+       -->
+
+        <div
+          id="carouselproductIndicators"
+          class="carousel slide"
+          data-bs-ride="true"
+          data-bs-touch="true"
+        >
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselproductIndicators"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselproductIndicators"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselproductIndicators"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="card-container">
+                <div class="card card1">
+                  <div class="imgBx">
+                    <img src="https://assets.codepen.io/4164355/shoes.png" />
+                  </div>
+                  <div class="card-protetor"></div>
+                  <!-- fill hover  -->
+                  <div class="contentBx">
+                    <h2>s25mix کفش نایکی مدل</h2>
+                    <div class="size">
+                      <h3>سایز</h3>
+                      <span>7</span>
+                      <span>8</span>
+                      <span>9</span>
+                      <span>10</span>
+                    </div>
+                    <div class="color">
+                      <h3>رنگ</h3>
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                    </div>
+                    <a href="#">خرید</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="card-container">
+                <div class="card card2">
+                  <div class="imgBx">
+                    <img src="images/dress_image.png" />
+                  </div>
+                  <div class="card-protetor"></div>
+                  <!-- fill hover  -->
+                  <div class="contentBx">
+                    <h2>gucci k21m تاپ مدل</h2>
+                    <div class="size">
+                      <h3>سایز</h3>
+                      <span>7</span>
+                      <span>8</span>
+                      <span>9</span>
+                      <span>10</span>
+                    </div>
+                    <div class="color">
+                      <h3>رنگ</h3>
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                    </div>
+                    <a href="#">خرید</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="card-container">
+                <div class="card card3">
+                  <div class="imgBx">
+                    <img src="images/shirt image.png" />
+                  </div>
+                  <div class="card-protetor"></div>
+                  <!-- fill hover  -->
+                  <div class="contentBx">
+                    <h2>reider 2 پیراهن AD مدل</h2>
+                    <div class="size">
+                      <h3>سایز</h3>
+                      <span>7</span>
+                      <span>8</span>
+                      <span>9</span>
+                      <span>10</span>
+                    </div>
+                    <div class="color">
+                      <h3>رنگ</h3>
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                    </div>
+                    <a href="#">خرید</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev d-none"
+            type="button"
+            data-bs-target="#carouselproductIndicators"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          </button>
+          <button
+            class="carousel-control-next d-none"
+            type="button"
+            data-bs-target="#carouselproductIndicators"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          </button>
+        </div>
+
+        <!-- card area 
+              -------------------
+                                       ----- -->
+        <a href="" role="button" class="btn btn-primary btn-lg"
+          >برای دیدن محصولات بیشتر کلیک کنید</a
+        >
+      </div>
+    </section>
+    <!-- features -->
+    <section id="features"></section>
+    <!-- comments -->
+    <section id="comments"></section>
+    <!-- footer -->
+    <section id="footer"></section>
+  </body>
+</html>
