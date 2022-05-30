@@ -114,7 +114,7 @@ body {
   height: 2000px;
   text-align: right;
   margin: -117px 0 0 -35px;
-  padding: 50px;
+  padding: 42px;
   padding-top: 125px;
   background: #ededed;
   list-style-type: none;
@@ -155,11 +155,14 @@ body {
 .mahsulat-nav > input {
   position: absolute;
   left: 0;
-  top: 16px;
-  opacity: 0;
+  top: 2px;
   z-index: 2;
   cursor: pointer;
+  width: 50px;
+  height: 50px;
+  opacity: 0;
 }
+
 .mahsulat-navlist {
   list-style: none;
   margin-right: 30px;
@@ -212,17 +215,17 @@ body {
   }
 }
 /* containers --------------------------*/
-/* --------------------------------------------------------------------------- */
-.container-fluid {
+.container-xxl {
   padding: 1% 8%;
 }
+/* --------------------------------------------------------------------------- */
 
 /* section */
 .colored-section {
   color: #fff;
 }
 #products {
-  padding: 8% 8%;
+  padding: 6% 6%;
 }
 
 /* heading */
@@ -304,15 +307,19 @@ nav .btn:active {
 .title-heading ~ span > .btn:focus {
   color: #2f8f9d;
 }
-/* carousel-image-container in *title* important */
+/* carousel in *title* important */
+.carousel-fade .carousel-item {
+  transition: opacity 1s;
+}
 #title .carousel-container {
   padding: 5% 0;
 }
 #title .carousel-image-container {
   position: relative;
-  left: -450px;
-  animation: clothesAnimTranslate 1s ease 0s 1 alternate;
-  transform: translate(434px, 0px);
+  opacity: 0;
+
+  animation: clothesAnimTranslate 0.6s ease 0.5s 1 alternate forwards;
+  transform: translate(-680px, 0px);
 }
 
 #title [class*="carousel-imageSet"] {
@@ -339,12 +346,9 @@ nav .btn:active {
 /* anaimations for title  */
 
 @keyframes clothesAnimTranslate {
-  0% {
-    transform: translate(0px, 0px);
-  }
-
   100% {
-    transform: translate(434px, 0px);
+    opacity: 1;
+    transform: translate(0px, 0px);
   }
 }
 
@@ -406,15 +410,8 @@ nav .btn:active {
 
 .card-container {
   position: relative;
-  transition: transform 0.6s;
-}
-.card-container:hover {
-  transform: translate3d(0, -10px, 20px);
 }
 
-.card-container:hover .card {
-  box-shadow: 0px 0px 19px 2px rgba(104, 98, 98, 0.39);
-}
 .card-container .card {
   position: relative;
   width: 320px;
@@ -423,6 +420,12 @@ nav .btn:active {
   border-radius: 20px;
   overflow: hidden;
   margin: 0 auto 15%;
+  transition: all 0.6s;
+}
+.card-container .card:hover {
+  transform: translate(0px, -20px);
+
+  box-shadow: 0px 0px 16px 3px rgba(0, 0, 0, 0.404);
 }
 
 .card-container .card::before,
@@ -527,6 +530,7 @@ nav .btn:active {
 }
 
 .card-container .card .contentBx h2 {
+  font-size: 1.7rem;
   position: relative;
   font-weight: 600;
   letter-spacing: 1px;
@@ -588,7 +592,7 @@ nav .btn:active {
 }
 
 .card-container .card .contentBx .size span:hover {
-  background: #9bdc28;
+  background: #2f8f9d;
 }
 
 .card-container .card .contentBx .color span {
@@ -638,6 +642,10 @@ nav .btn:active {
     width: 229px;
     height: 341px;
   }
+  .card-container .card .contentBx h2 {
+    font-size: 1.2rem;
+    padding: 2% 5%;
+  }
   .card-container .card .imgBx > img {
     width: 200px;
   }
@@ -654,17 +662,51 @@ nav .btn:active {
 
 /* products */
 /* carousel in product section */
-
+#products .products-container {
+  padding: 1% 0%;
+}
+#products .product-heading {
+}
 .card-box-style {
   padding: 5% 8%;
 }
-/* media q  */
+#products .carousel-item {
+  padding: 8% 0 2%;
+}
+#products
+  .carousel
+  .carousel-indicators
+  [data-bs-target="#carouselproductIndicators"] {
+  width: 17px;
+  height: 17px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+#products .big-heading {
+  font-size: 2.2rem;
+}
+#products .container-xxl > h2 {
+  font-weight: 700;
+}
+#products .container-xxl > h2 ~ p {
+  color: #7e8e96;
+}
+
+/*  
+
+--    media q  ---
+
+---- */
+@media (max-width: 375px) {
+  #products .carousel-item {
+    padding: 8% 0 7%;
+  }
+}
+/* carousel sidplay */
 @media (max-width: 1120px) {
   #products .card-box-style {
     display: none;
-  }
-  #products .carousel-item {
-    padding: 5% 0;
   }
 }
 @media (min-width: 1121px) {
